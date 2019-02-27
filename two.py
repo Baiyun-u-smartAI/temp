@@ -6,7 +6,9 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+import PyQt5.QtWidgets as QtWidgets
+import PyQt5.QtCore as QtCore
+import PyQt5.QtGui as QtGui
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
@@ -15,6 +17,9 @@ from PyQt5.QtWidgets import *
 class spinBox(QtWidgets.QSpinBox):
     def keyPressEvent(self, event):
         print "hey dude, your press key on me"
+
+
+
 
 
 class Ui_Dialog(QMainWindow):
@@ -42,6 +47,7 @@ class Ui_Dialog(QMainWindow):
         self.spinBox.setRange(20,200)
         self.spinBox.setSingleStep(10)
         self.spinBox.setWrapping(True)
+
 
 
 
