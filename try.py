@@ -30,22 +30,19 @@ plt.show()
 print np.sum(B1),np.sum(B2),np.sum(B3),np.sum(B4)
 
 """
-import cv2.cv2 as cv2
-import numpy as np
+class MyClass(object):
+    def __init__(self):
+        self.data=0
 
-img = cv2.imread('4.png',0)
-cv2.imshow('img',img)
-cv2.waitKey(0)
-
-h, w = img.shape
-
-sum3 = 0
-for i in range(h):
-    for j in range(w):
-        sum3 += img[i, j]
-
-print sum3
+def func(self):
+    print "func"
 
 
+
+
+if __name__=="__main__":
+    MyClass.func = func
+    a=MyClass()
+    a.func()
 
 
