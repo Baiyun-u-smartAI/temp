@@ -16,8 +16,8 @@ int main (int argc, char *argv[])
     }  
 
     // 步骤2：实际进行连接  
-    // 参数分别为，conn连接句柄，host是MySQL所在主机或地址，user用户名，password密码，database_name数据库名，后面的都是默认  
-    conn = mysql_real_connect(conn, "127.0.0.1", "root", "root", "test", 0, NULL, 0);  
+    // 参数分别为，conn连接句柄，host是MySQL所在主机或地址，user用户名，password密码，database_name数据库名，port是服务器端口，后面的都是默认  
+    conn = mysql_real_connect(conn, "host", "user", "password", "database_name", port, NULL, 0);  
 
     if (conn) { // 连接成功  
         printf("Connection success!\n");
